@@ -34,44 +34,16 @@ h2 {
      font-family: "Montserrat", sans-serif;
      font-size: 36px;
      text-align: center;
+     padding: 15px;
 }
 
+a {
+     text-decoration: none;
+}
 
 /******************************************
 /* LAYOUT                   
 /*******************************************/
-.arrowUp {
-     width: 0;
-     height: 0;
-     border-left: 60px solid transparent;
-     border-right: 60px solid transparent;
-     border-bottom: 60px solid #3B9BCD;
-}
-
-.arrowDown {
-     width: 0;
-     height: 0;
-     border-left: 60px solid transparent;
-     border-right: 60px solid transparent;
-     border-bottom: 60px solid #3B9BCD;
-}
-
-.arrowRight {
-     width: 0;
-     height: 0;
-     border-top: 0px solid transparent;
-     border-bottom: 220px solid transparent;
-     border-left: 220px solid #3B9BCD;
-     margin: 0;
-}
-
-.arrowLeft {
-     width: 0;
-     height: 0;
-     border-top: 220px solid transparent;
-     border-bottom: 0px solid transparent;
-     border-right: 220px solid #3B9BCD;
-}
 
 .innerWrapper {
      width: 100%;
@@ -81,10 +53,24 @@ h2 {
      margin: 0;
 }
 
+.innerWrapperForm {
+     width: 75%;
+     height: 100%;
+     display: block;
+     text-align: left;
+     padding: 5px 75px 75px 75px; 
+}
+
+img {
+    top: 0;
+    left: 0;
+}
+
 .box{
      height:100%;
      width: 25%;
      float: left;
+     position: relative;
 }
 
 .circle {
@@ -97,17 +83,25 @@ h2 {
      background-color: black;
      padding-top: 35px;
      text-align: center;
-     z-index: 10;
      margin: 0;
+     position: absolute;
+     z-index: 1;
+     top: 75px;
+     left:100px;
 
 }
 
-#col1{
-     float:left;
-     width: 50%;
+div div a:link, div div a:visited {
+     color: white;
 }
 
-#col2{
+div div a:hover {
+     color: yellow;
+}
+
+
+
+#col1, #col2 {
      float:left;
      width: 50%;
 }
@@ -117,6 +111,33 @@ h2 {
      display: block;
      padding: 20px;
      overflow: hidden;
+}
+
+/*Modal Background*/
+.modal {
+     display:none;
+     z-index: 3;
+     left:0;
+     top:0;
+}
+
+/*Modal Content*/
+.modalContent {
+     background-color: yellow;
+}
+
+/*Close Button*/
+.close {
+     color: #aaa;
+     float:right;
+     font-size: 28px;
+}
+
+.close:hover,
+.close:focus {
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
 }
 
 
@@ -152,6 +173,35 @@ button {
      margin: 20px 0px;
 }
 
+form {
+     padding: 12px 20px;
+     margin: 8px 0;
+     display: inline-block;
+     box-sizing: border-box;
+     border-radius: 5px;
+     box-shadow: none;
+}
+
+.form input {
+     outline: none;
+     display: block;
+     width: 100%;
+     border: 1px solid #d9d9d9;
+     padding: 15px 20px;
+     margin: 0 0 20px;
+     font-size: 14px;
+     box-sizing: border-box;
+}
+
+.form input[type=text]:focus {
+     border: 1px solid #33b5e5;
+     color: #333333;
+}
+
+#intro {
+     width: 50%;
+}
+
 
 p {
      text-align: left;
@@ -159,32 +209,22 @@ p {
 
 
 select {
-     width: 25%;
-     padding: 16px 20px;
-     border: 1px solid #4A4A4A;
-     border-radius: 5px;
+     width: 100%;
+     border: 1px solid #d9d9d9;
+     padding: 40px 20px;
+     margin: 8px 0;
+     display: inline-block;
+     box-sizing: border-box;
+     box-shadow: none;
+     font-family: "Open Sans", sans-serif;
+     font-size: 14px;
 }
 
 .submit {
      clear: both;
 }
 
-input [type=text]:focus {
-     display: block;
-     width: 75%;
-     background-color: white;
-     border: solid #4A4A4A 1px;
-     border-radius: 5px;
-     color: #4A4A4A;
-     padding: 15px 20px;
-     margin: 8px 0;
-     font-size: 14px;
 
-}
-
-#intro {
-     width: 50%;
-}
 
 textarea {
      display: block;
@@ -196,4 +236,26 @@ textarea {
      float: right;
 }
 
+/******************************************
+/* Individual Words                 
+/*******************************************/
 
+.please {
+   transform: rotate(90deg);  
+}
+
+.food {
+   transform: rotate(90deg);  
+}
+
+.milk {
+   transform: rotate(90deg);  
+}
+
+.bath{
+   transform: rotate(90deg);  
+}
+
+.water {
+   transform: rotate(90deg);  
+}

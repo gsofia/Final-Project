@@ -29,79 +29,106 @@
 			</div>
 
 			<div class ="box innerWrapper">
-				<div class = "arrowRight"></div>
-				<div class = "circle">More</div>
+				<img src="icons/Triangle.svg" class="more"/>
+				<div class="circle"><a href="">More</a></div>
+				<div id="moreModal" class="modal">
+					<div class="modalContent">
+						<span class="close">X</span>
+						<p>modal text</p> 
+					</div>
+				</div>
 			</div>
 				
-			<div class ="box">	
-				<div class = "innerWrapper arrowLeft"></div>
+			<div class ="box innerWrapper">	
+				<img src="icons/Triangle.svg" class="please"/>
+				<div class = "circle">Please</div>
 			</div>	
 		</div>
 
 		<div class = "row">
-			<div class = "box">
-				<div class= "innerWrapper">Food</div>
+			<div class = "box innerWrapper">
+				<img src="icons/Triangle.svg" class="food"/>
+				<div class = "circle">Food</div>
 			</div>
 			
-			<div class = "box">
-				<div class= "innerWrapper">Diaper</div>
+			<div class = "box innerWrapper">
+				<img src="icons/Triangle.svg" class="diaper"/>
+				<div class = "circle">Diaper</div>
 			</div>
 			
-			<div class = "box">
-				<div class= "innerWrapper">Milk</div>
+			<div class = "box innerWrapper">
+				<img src="icons/Triangle.svg" class="milk"/>
+				<div class = "circle">Milk</div>
 			</div>
 			
-			<div class = "box">
-				<div class= "innerWrapper">Help</div>
+			<div class = "box innerWrapper">
+				<img src="icons/Triangle.svg" class="help"/>
+				<div class = "circle">Help</div>
 			</div>
 		
 		</div>
 
 		<div class = "row">
-			<div class = "box">
-				<div class= "innerWrapper">Bath</div>
+			<div class = "box innerWrapper">
+				<img src="icons/Triangle.svg" class="bath"/>
+				<div class = "circle">Bath</div>
 			</div>
 			
-			<div class = "box">
-				<div class= "innerWrapper">Done</div>
+			<div class = "box innerWrapper">
+				<img src="icons/Triangle.svg" class="done"/>
+				<div class = "circle">Done</div>
 			</div>
 			
-			<div class = "box">
-				<div class= "innerWrapper">Water</div>
+			<div class = "box innerWrapper">
+				<img src="icons/Triangle.svg" class="water"/>
+				<div class = "circle">Water</div>
 			</div>
 			
-			<div class = "box">
-				<div class= "innerWrapper">Cat</div>
+			<div class = "box innerWrapper">
+				<img src="icons/Triangle.svg" class="cat"/>
+				<div class = "circle">Cat</div>
 			</div>
 		</div>
+
+		<br>
 
 		<section>
 			<h2>Suggest a Sign</h2>
 
 			<div>
 				
-				<div class = "innerWrapper" id = "col1">
+				<!-- <form>
+					<input type="text" placeholder="Your Name">
+					<input type="text" placeholder="Your email">
+					<select name="categories">
+						<option value="food">Food</option>
+						<option value="actions">Action</option>
+						<option value="Letters">Letter</option>
+						<option value="Numbers">Number</option>
+						<option value="Emotion">Emotion</option>
+					</select>	
+				</form> -->
+
+				<form class = "innerWrapperForm form" id = "col1">
 					<div id = >
-						<input type="text" name="writeIn" class="form" placeholder="Your Name">
+						<input type="text" name="writeIn" placeholder="Your Name">
 					</div>
 
 					<div>
-						<input type="text" name="writeIn" class="form" placeholder="Your email">
+						<input type="text" name="writeIn" placeholder="Your email">
 					</div>	
 				
-					<div>
-						<select name="categories">
+					<select name="categories">
 							<option value="food">Food</option>
 							<option value="actions">Action</option>
 							<option value="Letters">Letter</option>
 							<option value="Numbers">Number</option>
 							<option value="Emotion">Emotion</option>
-						</select>
-					</div>
-							
-				</div>
+					</select>
+									
+				</form>
 
-				<div class = "innerWrapper" id = "col2">
+				<div class = "innerWrapperForm" id = "col2">
 					
 					<div>
 						<textarea name="message" placeholder="Write your message here"></textarea>
