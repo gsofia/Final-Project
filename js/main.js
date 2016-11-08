@@ -1,9 +1,10 @@
-
-$("a").on("click", function(){
-	$("modal").style.display = "block";
+// on clicking of a word, show the modal 
+$("#moreButton").on('click', function(){
+  $(".modal").addClass("modalShow");
 });
 
-$("close").on("click", function() {
-	$("close").style.display = "none";
+// on clicking of the close button, hide the modal
+$(".modalClose").on("click", function(){
+  $(".modal").removeClass("modalShow");
 });
 

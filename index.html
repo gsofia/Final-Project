@@ -30,39 +30,46 @@
 
 			<div class ="box innerWrapper">
 				<img src="icons/Triangle.svg" class="more"/>
-				<div class="circle"><a href="">More</a></div>
+				<div class="circle"><a id="moreButton" href="">More</a></div>
+				
 				<div id="moreModal" class="modal">
 					<div class="modalContent">
-						<span class="close">X</span>
-						<p>modal text</p> 
+						<h3>More</h3>
+						<div>
+							<p>Explanation of the movement—Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum, velit vulputate malesuada bibendum, metus metus auctor nisi, ac tincidunt est dolor ut eros.</p> 
+							<img src="images/more.gif" alt="sign language sign for more">
+							<button class="modalClose">Close</button>
+						</div>	
 					</div>
 				</div>
+			
+			<div class="modalOverlay"></div>
 			</div>
 				
 			<div class ="box innerWrapper">	
-				<img src="icons/Triangle.svg" class="please"/>
+				<img src="icons/Triangle.svg" id="please"/>
 				<div class = "circle">Please</div>
 			</div>	
 		</div>
 
 		<div class = "row">
 			<div class = "box innerWrapper">
-				<img src="icons/Triangle.svg" class="food"/>
+				<img src="icons/Triangle.svg" id="food"/>
 				<div class = "circle">Food</div>
 			</div>
 			
 			<div class = "box innerWrapper">
-				<img src="icons/Triangle.svg" class="diaper"/>
+				<img src="icons/Triangle.svg" id="diaper"/>
 				<div class = "circle">Diaper</div>
 			</div>
 			
 			<div class = "box innerWrapper">
-				<img src="icons/Triangle.svg" class="milk"/>
+				<img src="icons/Triangle.svg" id="milk"/>
 				<div class = "circle">Milk</div>
 			</div>
 			
 			<div class = "box innerWrapper">
-				<img src="icons/Triangle.svg" class="help"/>
+				<img src="icons/Triangle.svg" id="help"/>
 				<div class = "circle">Help</div>
 			</div>
 		
@@ -70,22 +77,22 @@
 
 		<div class = "row">
 			<div class = "box innerWrapper">
-				<img src="icons/Triangle.svg" class="bath"/>
+				<img src="icons/Triangle.svg" id="bath"/>
 				<div class = "circle">Bath</div>
 			</div>
 			
 			<div class = "box innerWrapper">
-				<img src="icons/Triangle.svg" class="done"/>
+				<img src="icons/Triangle.svg" id="done"/>
 				<div class = "circle">Done</div>
 			</div>
 			
 			<div class = "box innerWrapper">
-				<img src="icons/Triangle.svg" class="water"/>
+				<img src="icons/Triangle.svg" id="water"/>
 				<div class = "circle">Water</div>
 			</div>
 			
 			<div class = "box innerWrapper">
-				<img src="icons/Triangle.svg" class="cat"/>
+				<img src="icons/Triangle.svg" id="cat"/>
 				<div class = "circle">Cat</div>
 			</div>
 		</div>
@@ -94,53 +101,36 @@
 
 		<section>
 			<h2>Suggest a Sign</h2>
+				<form action="signs.php" method="post" class = "innerWrapperForm">
+					<div class = "col1" class="innerWrapperForm">
 
-			<div>
+						<div>
+							<input type="text" name="name" placeholder="Your name">
+						</div>
+
+						<div>
+							<input type="text" name="email" placeholder="Your email">
+						</div>	
 				
-				<!-- <form>
-					<input type="text" placeholder="Your Name">
-					<input type="text" placeholder="Your email">
-					<select name="categories">
-						<option value="food">Food</option>
-						<option value="actions">Action</option>
-						<option value="Letters">Letter</option>
-						<option value="Numbers">Number</option>
-						<option value="Emotion">Emotion</option>
-					</select>	
-				</form> -->
-
-				<form class = "innerWrapperForm form" id = "col1">
-					<div id = >
-						<input type="text" name="writeIn" placeholder="Your Name">
-					</div>
-
-					<div>
-						<input type="text" name="writeIn" placeholder="Your email">
-					</div>	
-				
-					<select name="categories">
+						<select name="categories">
 							<option value="food">Food</option>
 							<option value="actions">Action</option>
 							<option value="Letters">Letter</option>
 							<option value="Numbers">Number</option>
 							<option value="Emotion">Emotion</option>
-					</select>
-									
-				</form>
-
-				<div class = "innerWrapperForm" id = "col2">
+						</select>
+					</div>
+				
+					<div class = "col2" class="innerWrapperForm">
 					
-					<div>
-						<textarea name="message" placeholder="Write your message here"></textarea>
-					</div>	
+						<div>
+							<textarea name="message" placeholder="Write your message here"></textarea>
+						</div>	
 
-					<div class = "submit">	
-						<button>Submit</button>
+						<input type="submit" name="submit" class="submitButton" value="Submit"/>
 					</div>
 
-				</div>
-
-			</div>
+				</form>
 
 		</section>
 

@@ -27,7 +27,7 @@ body {
 
 h1 {
      font-family: "Montserrat", sans-serif;
-     padding: 0px 20px;
+     padding: 0px 30px;
 }
 
 h2 {
@@ -51,14 +51,16 @@ a {
      display: block;
      text-align: center;
      margin: 0;
+     padding: 10px;
+     overflow: hidden;
 }
 
 .innerWrapperForm {
-     width: 75%;
+     width: 100%;
      height: 100%;
      display: block;
      text-align: left;
-     padding: 5px 75px 75px 75px; 
+     padding: 5px 50px 50px 50px; 
 }
 
 img {
@@ -101,9 +103,10 @@ div div a:hover {
 
 
 
-#col1, #col2 {
+.col1, .col2 {
      float:left;
      width: 50%;
+     padding: 15px 20px 20px 20px;
 }
 
 .row{
@@ -113,31 +116,80 @@ div div a:hover {
      overflow: hidden;
 }
 
-/*Modal Background*/
+/*General Modal Styling*/
 .modal {
-     display:none;
-     z-index: 3;
-     left:0;
-     top:0;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 200;
+     overflow:auto;
+     visibility: hidden;
 }
 
 /*Modal Content*/
 .modalContent {
-     background-color: yellow;
+     color: #fff;
+     background: #9bdeef;
+     position: relative;
+     border-radius: 3px;
+     margin: 0 auto;
 }
 
-/*Close Button*/
-.close {
-     color: #aaa;
-     float:right;
-     font-size: 28px;
+.modalContent h3 {
+     margin: 0;
+     padding: 0.4em;
+     text-align: center;
+     font-size: 2.4em;
+     opacity: 0.8;
+     background: rgba(0,0,0,0.1);
+     border-radius: 3px 3px 0 0;
 }
 
-.close:hover,
-.close:focus {
-     color: black;
-     text-decoration: none;
-     cursor: pointer;
+.modalContent div {
+     padding: 15px 40px 30px;
+     margin: 0;
+     font-size: 1.15em;
+}
+
+.modalContent div p {
+     margin: 0;
+     padding: 10px 0;
+}
+
+.modalClose {
+     display: block;
+     margin: 0 auto;
+     background-color: white;
+     border: solid #3B9BCD 1px;
+     border-radius: 5px;
+     color: #3B9BCD;
+     font-size: 14px;
+     width: 25%;
+     height: 30px;
+}
+
+.modalShow {
+     visibility: visible;
+}
+
+.modalOverlay {
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     visibility: hidden;
+     top: 0;
+     left: 0;
+     z-index: 500;
+     opacity: 0;
+     background: rgba(143, 27, 15, 0.8);
+     transition: all 0.3;
+}
+
+.modalShow ~ .modalOverlay {
+     opacity: 1;
+     visibility: visible;
 }
 
 
@@ -155,22 +207,21 @@ section {
      display: block;
      border: 1px solid #4A4A4A;
      overflow: auto;
+     margin: 40px;
 }
 
 
 /******************************************
 /* ADDITIONAL STYLES                   
 /*******************************************/
-button {
+input[type=submit] {
      background-color: white;
      border: solid #3B9BCD 1px;
      border-radius: 5px;
      color: #3B9BCD;
-     padding: 15px 32px;
-     text-align: center;
      font-size: 14px;
      float: right;
-     margin: 20px 0px;
+     width: 20%;
 }
 
 form {
@@ -180,9 +231,10 @@ form {
      box-sizing: border-box;
      border-radius: 5px;
      box-shadow: none;
-}
+     overflow: hidden;
+} 
 
-.form input {
+input {
      outline: none;
      display: block;
      width: 100%;
@@ -193,7 +245,12 @@ form {
      box-sizing: border-box;
 }
 
-.form input[type=text]:focus {
+input[type=text]:focus {
+     border: 1px solid #33b5e5;
+     color: #333333;
+}
+
+textarea:focus {
      border: 1px solid #33b5e5;
      color: #333333;
 }
@@ -209,7 +266,7 @@ p {
 
 
 select {
-     width: 100%;
+     width: 50%;
      border: 1px solid #d9d9d9;
      padding: 40px 20px;
      margin: 8px 0;
@@ -220,42 +277,62 @@ select {
      font-size: 14px;
 }
 
-.submit {
-     clear: both;
-}
-
-
-
 textarea {
+     outline: none;
      display: block;
      width: 100%;
      height: 150px;
-     padding: 12px 20px;
-     border: 1px solid #4A4A4A;
-     border-radius: 5px;
+     padding: 15px 20px;
+     border: 1px solid #d9d9d9;
+     border-radius: 2px;
      float: right;
+     margin: 0 0 20px;
+     font-size: 14px;
+     box-sizing: border-box;
+     resize: none;
 }
 
 /******************************************
 /* Individual Words                 
 /*******************************************/
 
-.please {
-   transform: rotate(90deg);  
+#please {
+   -moz-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
 }
 
-.food {
-   transform: rotate(90deg);  
+#food {
+   -moz-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
 }
 
-.milk {
-   transform: rotate(90deg);  
+
+#milk {
+   -moz-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
 }
 
-.bath{
-   transform: rotate(90deg);  
+#bath {
+   -moz-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
 }
 
-.water {
-   transform: rotate(90deg);  
+#water {
+   -moz-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
 }
