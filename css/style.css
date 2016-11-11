@@ -75,6 +75,22 @@ img {
      position: relative;
 }
 
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .box {
+    
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .box {
+    width: 100%;
+    margin: 0;
+    top: auto;
+  }
+}
+
 .circle {
      width: 100px;
      height: 100px;
@@ -88,11 +104,18 @@ img {
      margin: 0;
      position: absolute;
      z-index: 1;
-     top: 75px;
-     left:100px;
+     top: 50%;
+     left:50%;
+     /*margin-top: -50px;
+     margin-left: -50px;*/
+     transform: translate(-50%,-50%);
+     cursor: pointer;
 
 }
 
+.circle:hover {
+    color: #FFFF4D;
+}
 div div a:link, div div a:visited {
      color: white;
 }
@@ -115,6 +138,9 @@ div div a:hover {
      padding: 20px;
      overflow: hidden;
 }
+
+
+
 
 /*General Modal Styling*/
 .modal {
@@ -174,18 +200,18 @@ div div a:hover {
      visibility: visible;
 }
 
-.modalOverlay {
+/*.modalOverlay {
      position: fixed;
      width: 100%;
      height: 100%;
      visibility: hidden;
      top: 0;
      left: 0;
-     z-index: 500;
+     z-index: 100;
      opacity: 0;
      background: rgba(143, 27, 15, 0.8);
      transition: all 0.3;
-}
+}*/
 
 .modalShow ~ .modalOverlay {
      opacity: 1;
@@ -259,6 +285,9 @@ textarea:focus {
      width: 50%;
 }
 
+img {
+    border: 1px solid #D3D3D3;
+}
 
 p {
      text-align: left;

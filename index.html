@@ -5,7 +5,7 @@
 		<meta name = "baby signs" content="website for learning about baby sign language">
 		<meta name = "sign language" content = "baby sign language learning">
 
-		<title>Working Title: Baby Sign Language</title>
+		<title>Baby Sign Language</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
 		<!-- <link rel="stylesheet" href="css/reset.css">
@@ -30,47 +30,109 @@
 
 			<div class ="box innerWrapper">
 				<img src="icons/Triangle.svg" class="more"/>
-				<div class="circle"><a id="moreButton" href="">More</a></div>
+				<div class="circle" data-sign="more">More</div>
 				
 				<div id="moreModal" class="modal">
 					<div class="modalContent">
 						<h3>More</h3>
 						<div>
-							<p>Explanation of the movement—Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum, velit vulputate malesuada bibendum, metus metus auctor nisi, ac tincidunt est dolor ut eros.</p> 
+							<p>To sign more, pinch your thumb and other four fingers together on each hand then bring your hands together, and pull them apart horizontally.</p> 
 							<img src="images/more.gif" alt="sign language sign for more">
 							<button class="modalClose">Close</button>
 						</div>	
 					</div>
 				</div>
-			
-			<div class="modalOverlay"></div>
+
 			</div>
 				
 			<div class ="box innerWrapper">	
 				<img src="icons/Triangle.svg" id="please"/>
-				<div class = "circle">Please</div>
+				<div class = "circle" data-sign="please">Please</div>
+				
+				<div id="pleaseModal" class="modal">
+					<div class="modalContent">
+						<h3>Please</h3>
+						<div>
+							<p>To sign Please, open your hand and turn it so that your palm is facing you. Then rub it in a circle on your chest.</p> 
+							<img src="images/please.gif" alt="sign language sign for please">
+							<button class="modalClose">Close</button>
+						</div>	
+					</div>
+				</div>
+
 			</div>	
 		</div>
 
 		<div class = "row">
 			<div class = "box innerWrapper">
 				<img src="icons/Triangle.svg" id="food"/>
-				<div class = "circle">Food</div>
+				<div class = "circle" data-sign="food">Food</div>
+
+				<div id="foodModal" class="modal">
+					<div class="modalContent">
+						<h3>Food</h3>
+						<div>
+							<p>To sign food, pinch your thumb and other four fingers together on one hand and then raise that hand to your lips. Move your hand back and forth a few inches, to and from your mouth to illustrate the sign.</p> 
+							<img src="images/food.gif" alt="sign language sign for food">
+							<button class="modalClose">Close</button>
+						</div>	
+					</div>
+				</div>
+
+
 			</div>
 			
 			<div class = "box innerWrapper">
 				<img src="icons/Triangle.svg" id="diaper"/>
-				<div class = "circle">Diaper</div>
+				<div class = "circle" data-sign="diaper">Diaper</div>
+				
+				<div id="diaperModal" class="modal">
+					<div class="modalContent">
+						<h3>Diaper</h3>
+						<div>
+							<p>To sign diaper, move your hand to your waist and touch your index and middle fingers to your thumbs on each hand.</p> 
+							<img src="images/diaper.gif" alt="sign language sign for diaper">
+							<button class="modalClose">Close</button>
+						</div>	
+					</div>
+				</div>
+
+
 			</div>
 			
 			<div class = "box innerWrapper">
 				<img src="icons/Triangle.svg" id="milk"/>
-				<div class = "circle">Milk</div>
+				<div class = "circle" data-sign="milk">Milk</div>
+
+				<div id="milkModal" class="modal">
+					<div class="modalContent">
+						<h3>Milk</h3>
+						<div>
+							<p>To sign milk, bring your hand to chest height and open and close your fist.</p> 
+							<img src="images/milk.gif" alt="sign language sign for milk">
+							<button class="modalClose">Close</button>
+						</div>	
+					</div>
+				</div>
+
+
 			</div>
 			
 			<div class = "box innerWrapper">
 				<img src="icons/Triangle.svg" id="help"/>
-				<div class = "circle">Help</div>
+				<div class = "circle" data-sign="help">Help</div>
+
+				<div id="helpModal" class="modal">
+					<div class="modalContent">
+						<h3>Help</h3>
+						<div>
+							<p>To sign help, open your palm and place your other hand on top of your open palm with your thumb sticking up. Then move both of your hands together in a motion that’s similar to lifting up.</p> 
+							<img src="images/help.gif" alt="sign language sign for help">
+							<button class="modalClose">Close</button>
+						</div>	
+					</div>
+				</div>
+
 			</div>
 		
 		</div>
@@ -78,23 +140,72 @@
 		<div class = "row">
 			<div class = "box innerWrapper">
 				<img src="icons/Triangle.svg" id="bath"/>
-				<div class = "circle">Bath</div>
+				<div class = "circle" data-sign="bath">Bath</div>
+
+				<div id="moreModal" class="modal">
+					<div class="modalContent">
+						<h3>Bath</h3>
+						<div>
+							<p>To sign bath, make fists with both your hands and move them vertically up and down in front of your chest, in a scrubbing motion.</p> 
+							<img src="images/bath.gif" alt="sign language sign for bath">
+							<button class="modalClose">Close</button>
+						</div>	
+					</div>
+				</div>
+
 			</div>
 			
 			<div class = "box innerWrapper">
 				<img src="icons/Triangle.svg" id="done"/>
-				<div class = "circle">Done</div>
+				<div class = "circle" data-sign="done">Done</div>
+
+				<div id="doneModal" class="modal">
+					<div class="modalContent">
+						<h3>Done</h3>
+						<div>
+							<p>To sign done, or all done, raise both of your open palms facing you to your shoulders and then flip them outwards.</p> 
+							<img src="images/all_done.gif" alt="sign language sign for done">
+							<button class="modalClose">Close</button>
+						</div>	
+					</div>
+				</div>
+
+
 			</div>
 			
 			<div class = "box innerWrapper">
 				<img src="icons/Triangle.svg" id="water"/>
-				<div class = "circle">Water</div>
+				<div class = "circle" data-sign="water">Water</div>
+
+				<div id="waterModal" class="modal">
+					<div class="modalContent">
+						<h3>Water</h3>
+						<div>
+							<p>To sign water, take one hand and use your thumb to hold down your pinky, and extend your three fingers. Then tap your index finger to your chin.</p> 
+							<img src="images/water.gif" alt="sign language sign for water">
+							<button class="modalClose">Close</button>
+						</div>	
+					</div>
+				</div>
+
 			</div>
 			
 			<div class = "box innerWrapper">
 				<img src="icons/Triangle.svg" id="cat"/>
-				<div class = "circle">Cat</div>
+				<div class = "circle" data-sign="cat">Cat</div>
+
+				<div id="catModal" class="modal">
+					<div class="modalContent">
+						<h3>Cat</h3>
+						<div>
+							<p>To sign cat, bring your hand up to your cheek and pinch your index and thumb together, then pull your hand a few inches away from your cheek, mimicking whiskers.</p> 
+							<img src="images/cat.gif" alt="sign language sign for more">
+							<button class="modalClose">Close</button>
+						</div>	
+					</div>
+				</div>
 			</div>
+		
 		</div>
 
 		<br>
