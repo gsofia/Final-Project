@@ -27,7 +27,7 @@ body {
 
 h1 {
      font-family: "Montserrat", sans-serif;
-     padding: 0px 30px;
+     padding: .25em;
 }
 
 h2 {
@@ -41,6 +41,70 @@ a {
      text-decoration: none;
 }
 
+
+figcaption {
+    font-family: "Open Sans", sans-serif;
+    font-size: .50em;
+    float: right;
+    clear: both;
+    padding: 0em 3.0em .5em 1.5em;
+}
+
+
+img {
+    border: 1px solid #D3D3D3;
+}
+
+p {
+     text-align: left;
+     float: left;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  p {
+    font-size: .85em;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  p {
+    font-size: 1.25em;
+  }
+}
+
+
+#buttons-wrapper {
+     margin: 0 auto;
+     width: 100%;
+     text-align: center;
+     display: block;
+     margin-top: 20px;
+}
+
+.btn{
+     color: #ffffff;
+     background-color: #428bca;
+     border-color: #357ebd;
+     padding: 6px 12px;
+     margin-bottom: 0;
+     font-size: 14px;
+     font-weight: normal;
+     line-height: 1.5;
+     text-align: center;
+     white-space: nowrap;
+     vertical-align: middle;
+     cursor: pointer;
+     border: 1px solid transparent;
+     border-radius: 4px;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     -o-user-select: none;
+     user-select: none;
+}
+
 /******************************************
 /* LAYOUT                   
 /*******************************************/
@@ -51,9 +115,17 @@ a {
      display: block;
      text-align: center;
      margin: 0;
-     padding: 10px;
+     padding: 15px;
      overflow: hidden;
 }
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .innerWrapper {
+    float: left;
+  }
+}
+
 
 .innerWrapperForm {
      width: 100%;
@@ -66,6 +138,13 @@ a {
 img {
     top: 0;
     left: 0;
+    float: left;
+}
+
+.modalContent img {
+    border: none;
+    width: 100%;
+    padding: .5em 1.5em .5em 1.5em;
 }
 
 .box{
@@ -76,14 +155,24 @@ img {
 }
 
 /* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
   .box {
-    
+    width: 33.333%;
+    margin: 0;
+    top: auto;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 699px) {
+  .box {
+    width: 50%;
+    margin: 0;
+    top: auto;
   }
 }
 
 /* Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 449px) {
   .box {
     width: 100%;
     margin: 0;
@@ -132,12 +221,26 @@ div div a:hover {
      padding: 15px 20px 20px 20px;
 }
 
-.row{
-     width: 100%;
-     display: block;
-     padding: 20px;
-     overflow: hidden;
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .col1, .col2 {
+    width: 100%;
+  }
 }
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+   .col1, .col2 {
+    width: 100%;
+  }
+}
+
+/* Column in modal */
+.col {
+    width: 50%;
+    float: left;
+}
+
 
 
 
@@ -145,28 +248,30 @@ div div a:hover {
 /*General Modal Styling*/
 .modal {
      position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
+     top: 50%;
+     left: 50%;
+     width: 0;
+     height: 0;
      z-index: 200;
-     overflow:auto;
-     visibility: hidden;
+     overflow: auto;
+     background: #9bdeef;
 }
 
 /*Modal Content*/
 .modalContent {
      color: #fff;
-     background: #9bdeef;
      position: relative;
      border-radius: 3px;
      margin: 0 auto;
+     overflow: auto;
+     /*visibility: hidden;*/
+     opacity: 0;
 }
 
 .modalContent h3 {
      margin: 0;
-     padding: 0.4em;
-     text-align: center;
+     padding: .5em 1.5em .5em 1.5em;
+     text-align: left;
      font-size: 2.4em;
      opacity: 0.8;
      background: rgba(0,0,0,0.1);
@@ -174,44 +279,35 @@ div div a:hover {
 }
 
 .modalContent div {
-     padding: 15px 40px 30px;
+     padding: .5em 1.5em .5em 1.5em;
      margin: 0;
-     font-size: 1.15em;
+     font-size: 1.10em;
+     overflow: auto;
 }
 
 .modalContent div p {
      margin: 0;
-     padding: 10px 0;
+     padding: .5em 0 .5em 0;
 }
 
 .modalClose {
      display: block;
-     margin: 0 auto;
+     margin: .75em 1.75em .5em 1.5em;
      background-color: white;
      border: solid #3B9BCD 1px;
      border-radius: 5px;
      color: #3B9BCD;
-     font-size: 14px;
-     width: 25%;
+     font-size: .75em;
+     width: 10%;
      height: 30px;
-}
+     float: right;
+     clear: both;
+ }
 
 .modalShow {
-     visibility: visible;
+     /*visibility: visible;*/
 }
 
-/*.modalOverlay {
-     position: fixed;
-     width: 100%;
-     height: 100%;
-     visibility: hidden;
-     top: 0;
-     left: 0;
-     z-index: 100;
-     opacity: 0;
-     background: rgba(143, 27, 15, 0.8);
-     transition: all 0.3;
-}*/
 
 .modalShow ~ .modalOverlay {
      opacity: 1;
@@ -219,7 +315,7 @@ div div a:hover {
 }
 
 
-.word {
+/*.word {
      display: block;
      text-align: center;
      border: 1px solid black;
@@ -227,13 +323,14 @@ div div a:hover {
      width: 100%;
      padding: 5px 5px 15px 0px;
      float: right;
-}
+}*/
 
 section {
      display: block;
      border: 1px solid #4A4A4A;
      overflow: auto;
      margin: 40px;
+     clear: both;
 }
 
 
@@ -245,7 +342,7 @@ input[type=submit] {
      border: solid #3B9BCD 1px;
      border-radius: 5px;
      color: #3B9BCD;
-     font-size: 14px;
+     font-size: 0.5em;
      float: right;
      width: 20%;
 }
@@ -258,6 +355,7 @@ form {
      border-radius: 5px;
      box-shadow: none;
      overflow: hidden;
+     clear:both;
 } 
 
 input {
@@ -285,12 +383,18 @@ textarea:focus {
      width: 50%;
 }
 
-img {
-    border: 1px solid #D3D3D3;
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #intro {
+    width: 100%;
+  }
 }
 
-p {
-     text-align: left;
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  #intro {
+    width: 100%;
+  }
 }
 
 

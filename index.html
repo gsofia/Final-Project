@@ -2,8 +2,7 @@
 <html lang = "en">
 	<head>
 		<meta charset = "utf-8">
-		<meta name = "baby signs" content="website for learning about baby sign language">
-		<meta name = "sign language" content = "baby sign language learning">
+		<meta name="baby signs" value="website for learning about baby sign language">
 
 		<title>Baby Sign Language</title>
 
@@ -21,199 +20,288 @@
 			<h1>Baby Sign Language</h1>
 		</header>
 		
-		<div class = "row">
-			<div id ="intro" class = "box">
-				<div class = "innerWrapper">
+		<!-- Introduction Text -->
+			<div id="intro" class="box">
+				<div class="innerWrapper">
 					<p>Babies are smarter than you think. Babies can start to understand language as early as three-months, even though most children don’t start speaking until about a year old. Baby sign language can help parents communicate with their child before the child develops vocal language skills, here are some signs to get you started.</p>
 				</div>	
 			</div>
 
-			<div class ="box innerWrapper">
+			<!-- More Box with Triangle -->
+			<div class="box innerWrapper">
 				<img src="icons/Triangle.svg" class="more"/>
 				<div class="circle" data-sign="more">More</div>
 				
-				<div id="moreModal" class="modal">
+				<!-- More Modal Content -->
+				<div id="moreModal" class="modal" data-index="0">
 					<div class="modalContent">
 						<h3>More</h3>
 						<div>
-							<p>To sign more, pinch your thumb and other four fingers together on each hand then bring your hands together, and pull them apart horizontally.</p> 
-							<img src="images/more.gif" alt="sign language sign for more">
-							<button class="modalClose">Close</button>
+							<div class="col">
+								<p>To sign more, pinch your thumb and other four fingers together on each hand then bring your hands together, and pull them apart horizontally.</p> 
+							</div>
+
+							<div class="col">	
+								<img id="main-image" src="images/more.gif" alt="sign language sign for more">
+								<figcaption>Image courtesy of Babysignlanguage.com</figcaption>
+							</div>
+
+							<div>
+								<div id="buttons-wrapper">
+									<span class="btn prev">prev</span>
+									<span class="btn next">next</span>
+								</div>
+
+								<button class="modalClose">Close</button>
+							</div>			
 						</div>	
 					</div>
 				</div>
 
 			</div>
-				
+			
+			<!-- Please Box with Triangle -->	
 			<div class ="box innerWrapper">	
 				<img src="icons/Triangle.svg" id="please"/>
-				<div class = "circle" data-sign="please">Please</div>
+				<div class="circle" data-sign="please">Please</div>
 				
+				<!-- Please Modal Content -->
 				<div id="pleaseModal" class="modal">
 					<div class="modalContent">
 						<h3>Please</h3>
 						<div>
-							<p>To sign Please, open your hand and turn it so that your palm is facing you. Then rub it in a circle on your chest.</p> 
-							<img src="images/please.gif" alt="sign language sign for please">
-							<button class="modalClose">Close</button>
-						</div>	
+							<div class="col">
+								<p>To sign Please, open your hand and turn it so that your palm is facing you. Then rub it in a circle on your chest.</p> 
+							</div>
+
+							<div class="col">
+								<img src="images/please.gif" alt="sign language sign for please">
+								<figcaption>Image courtesy of Babysignlanguage.com</figcaption>
+							</div>	
+
+							<div>
+								<button class="modalClose">Close</button>
+							</div>
+						</div>
 					</div>
 				</div>
-
 			</div>	
-		</div>
 
-		<div class = "row">
-			<div class = "box innerWrapper">
+			<div class="box innerWrapper">
 				<img src="icons/Triangle.svg" id="food"/>
-				<div class = "circle" data-sign="food">Food</div>
+				<div class="circle" data-sign="food">Food</div>
 
+				<!-- Food Modal Content -->
 				<div id="foodModal" class="modal">
 					<div class="modalContent">
 						<h3>Food</h3>
 						<div>
-							<p>To sign food, pinch your thumb and other four fingers together on one hand and then raise that hand to your lips. Move your hand back and forth a few inches, to and from your mouth to illustrate the sign.</p> 
-							<img src="images/food.gif" alt="sign language sign for food">
-							<button class="modalClose">Close</button>
+							<div class="col">
+								<p>To sign food, pinch your thumb and other four fingers together on one hand and then raise that hand to your lips. Move your hand back and forth a few inches, to and from your mouth to illustrate the sign.</p> 
+							</div>
+							
+							<div class="col">
+								<img src="images/food.gif" alt="sign language sign for food">
+								<figcaption>Image courtesy of Babysignlanguage.com</figcaption>
+							</div>
+
+							<div>
+								<button class="modalClose">Close</button>
+							</div>
 						</div>	
 					</div>
 				</div>
-
-
 			</div>
 			
-			<div class = "box innerWrapper">
+			<div class="box innerWrapper">
 				<img src="icons/Triangle.svg" id="diaper"/>
-				<div class = "circle" data-sign="diaper">Diaper</div>
+				<div class="circle" data-sign="diaper">Diaper</div>
 				
+				<!-- Diaper Modal Content -->
 				<div id="diaperModal" class="modal">
 					<div class="modalContent">
 						<h3>Diaper</h3>
 						<div>
-							<p>To sign diaper, move your hand to your waist and touch your index and middle fingers to your thumbs on each hand.</p> 
-							<img src="images/diaper.gif" alt="sign language sign for diaper">
-							<button class="modalClose">Close</button>
+							<div class="col">
+								<p>To sign diaper, move your hand to your waist and touch your index and middle fingers to your thumbs on each hand.</p> 
+							</div>
+							
+							<div class="col">
+								<img src="images/diaper.gif" alt="sign language sign for diaper">
+								<figcaption>Image courtesy of Babysignlanguage.com</figcaption>
+							</div>	
+
+							<div>
+								<button class="modalClose">Close</button>
+							</div>					
 						</div>	
 					</div>
 				</div>
-
-
 			</div>
 			
-			<div class = "box innerWrapper">
+			<div class="box innerWrapper">
 				<img src="icons/Triangle.svg" id="milk"/>
-				<div class = "circle" data-sign="milk">Milk</div>
+				<div class="circle" data-sign="milk">Milk</div>
 
+				<!-- Milk Modal Content -->
 				<div id="milkModal" class="modal">
 					<div class="modalContent">
 						<h3>Milk</h3>
 						<div>
-							<p>To sign milk, bring your hand to chest height and open and close your fist.</p> 
-							<img src="images/milk.gif" alt="sign language sign for milk">
-							<button class="modalClose">Close</button>
+							<div div class="col">
+								<p>To sign milk, bring your hand to chest height and open and close your fist.</p> 
+							</div>
+							
+							<div div class="col">
+								<img src="images/milk.gif" alt="sign language sign for milk">
+								<figcaption>Image courtesy of Babysignlanguage.com</figcaption>
+							</div>
+							
+							<div>
+								<button class="modalClose">Close</button>
+							</div>	
 						</div>	
 					</div>
 				</div>
-
-
 			</div>
 			
-			<div class = "box innerWrapper">
+			<div class="box innerWrapper">
 				<img src="icons/Triangle.svg" id="help"/>
-				<div class = "circle" data-sign="help">Help</div>
+				<div class="circle" data-sign="help">Help</div>
 
+				<!-- Help Modal Content -->
 				<div id="helpModal" class="modal">
 					<div class="modalContent">
 						<h3>Help</h3>
 						<div>
-							<p>To sign help, open your palm and place your other hand on top of your open palm with your thumb sticking up. Then move both of your hands together in a motion that’s similar to lifting up.</p> 
-							<img src="images/help.gif" alt="sign language sign for help">
-							<button class="modalClose">Close</button>
+							<div class="col">
+								<p>To sign help, open your palm and place your other hand on top of your open palm with your thumb sticking up. Then move both of your hands together in a motion that’s similar to lifting up.</p> 
+							</div>
+							
+							<div class="col">	
+								<img src="images/help.gif" alt="sign language sign for help">
+								<figcaption>Image courtesy of Babysignlanguage.com</figcaption>
+							</div>
+							
+							<div>	
+								<button class="modalClose">Close</button>
+							</div>		
 						</div>	
 					</div>
 				</div>
-
 			</div>
-		
-		</div>
 
-		<div class = "row">
-			<div class = "box innerWrapper">
+			<div class="box innerWrapper">
 				<img src="icons/Triangle.svg" id="bath"/>
-				<div class = "circle" data-sign="bath">Bath</div>
+				<div class="circle" data-sign="bath">Bath</div>
 
-				<div id="moreModal" class="modal">
+				<!-- Bath Modal Content -->
+				<div id="bathModal" class="modal">
 					<div class="modalContent">
 						<h3>Bath</h3>
 						<div>
-							<p>To sign bath, make fists with both your hands and move them vertically up and down in front of your chest, in a scrubbing motion.</p> 
-							<img src="images/bath.gif" alt="sign language sign for bath">
-							<button class="modalClose">Close</button>
+							<div class="col">
+								<p>To sign bath, make fists with both your hands and move them vertically up and down in front of your chest, in a scrubbing motion.</p> 
+							</div>
+
+							<div class="col">
+								<img src="images/bath.gif" alt="sign language sign for bath">
+								<figcaption>Image courtesy of Babysignlanguage.com</figcaption>
+							</div>
+
+							<div>
+								<button class="modalClose">Close</button>
+							</div>	
 						</div>	
 					</div>
 				</div>
-
 			</div>
 			
-			<div class = "box innerWrapper">
+			<div class="box innerWrapper">
 				<img src="icons/Triangle.svg" id="done"/>
-				<div class = "circle" data-sign="done">Done</div>
+				<div class="circle" data-sign="done">Done</div>
 
+				<!-- Done Modal Content -->
 				<div id="doneModal" class="modal">
 					<div class="modalContent">
 						<h3>Done</h3>
 						<div>
-							<p>To sign done, or all done, raise both of your open palms facing you to your shoulders and then flip them outwards.</p> 
-							<img src="images/all_done.gif" alt="sign language sign for done">
-							<button class="modalClose">Close</button>
+							<div class="col">
+								<p>To sign done, or all done, raise both of your open palms facing you to your shoulders and then flip them outwards.</p> 
+							</div>
+							
+							<div class="col">
+								<img src="images/all_done.gif" alt="sign language sign for done">
+								<figcaption>Image courtesy of Babysignlanguage.com</figcaption>
+							</div>
+
+							<div>
+								<button class="modalClose">Close</button>
+							</div>	
 						</div>	
 					</div>
 				</div>
-
-
 			</div>
 			
-			<div class = "box innerWrapper">
+			<div class="box innerWrapper">
 				<img src="icons/Triangle.svg" id="water"/>
-				<div class = "circle" data-sign="water">Water</div>
+				<div class="circle" data-sign="water">Water</div>
 
+				<!-- Water Modal Content -->
 				<div id="waterModal" class="modal">
 					<div class="modalContent">
 						<h3>Water</h3>
 						<div>
-							<p>To sign water, take one hand and use your thumb to hold down your pinky, and extend your three fingers. Then tap your index finger to your chin.</p> 
-							<img src="images/water.gif" alt="sign language sign for water">
-							<button class="modalClose">Close</button>
+							<div class="col">
+								<p>To sign water, take one hand and use your thumb to hold down your pinky, and extend your three fingers. Then tap your index finger to your chin.</p> 
+							</div>
+							
+							<div class="col">
+								<img src="images/water.gif" alt="sign language sign for water">
+								<figcaption>Image courtesy of Babysignlanguage.com</figcaption>
+							</div>
+							
+							<div>
+								<button class="modalClose">Close</button>
+							</div>
+							
 						</div>	
 					</div>
 				</div>
-
 			</div>
 			
-			<div class = "box innerWrapper">
+			<div class="box innerWrapper">
 				<img src="icons/Triangle.svg" id="cat"/>
-				<div class = "circle" data-sign="cat">Cat</div>
+				<div class="circle" data-sign="cat">Cat</div>
 
+				<!-- Cat Modal Content -->
 				<div id="catModal" class="modal">
 					<div class="modalContent">
 						<h3>Cat</h3>
 						<div>
-							<p>To sign cat, bring your hand up to your cheek and pinch your index and thumb together, then pull your hand a few inches away from your cheek, mimicking whiskers.</p> 
-							<img src="images/cat.gif" alt="sign language sign for more">
-							<button class="modalClose">Close</button>
+							<div class="col">
+								<p>To sign cat, bring your hand up to your cheek and pinch your index and thumb together, then pull your hand a few inches away from your cheek, mimicking whiskers.</p> 
+							</div>
+							
+							<div class="col">
+								<img id="main-image" src="images/cat.gif" alt="sign language sign for more">
+								<figcaption>Image courtesy of Babysignlanguage.com</figcaption>
+							</div>
+							
+							<div>
+								<button class="modalClose">Close</button>
+							</div>
 						</div>	
 					</div>
 				</div>
 			</div>
-		
-		</div>
 
 		<br>
 
 		<section>
 			<h2>Suggest a Sign</h2>
-				<form action="signs.php" method="post" class = "innerWrapperForm">
-					<div class = "col1" class="innerWrapperForm">
+				<form action="signs.php" method="post" class ="innerWrapperForm">
+					<div class="col1" class="innerWrapperForm">
 
 						<div>
 							<input type="text" name="name" placeholder="Your name">
@@ -232,7 +320,7 @@
 						</select>
 					</div>
 				
-					<div class = "col2" class="innerWrapperForm">
+					<div class="col2" class="innerWrapperForm">
 					
 						<div>
 							<textarea name="message" placeholder="Write your message here"></textarea>
