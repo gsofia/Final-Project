@@ -29,10 +29,10 @@ function openModal(element){
 }
 
 function closeModal(element){
-	element.animate({
+	element.find(".modalContent").animate({
 	  	opacity: "0"
  	}, function(){
-  		element.find(".modalContent").animate({
+  		element.animate({
   			top: "50%",
   			left: "50%",
   			width: "0",
