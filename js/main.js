@@ -109,6 +109,7 @@ function nextImage(){
 				// show new modal
 				openModal($(modals[modalIndex]));
 				currentModalIndex = modalIndex;
+				dataSign = $(modals[currentModalIndex]).attr("data-sign");
 
 		});
 
