@@ -37,6 +37,14 @@ h2 {
      padding: 15px;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  h2 {
+    font-size: 1.25em;
+  }
+}
+
+
+
 a {
      text-decoration: none;
 }
@@ -84,19 +92,18 @@ p {
 }
 
 .btn{
-     color: #ffffff;
-     background-color: #428bca;
-     border-color: #357ebd;
+     color: #3B9BCD;
+     background-color: white;
+     border: solid #3B9BCD 1px;
      padding: 6px 12px;
      margin-bottom: 0;
-     font-size: 14px;
+     font-size: .75em;
      font-weight: normal;
      line-height: 1.5;
      text-align: center;
      white-space: nowrap;
      vertical-align: middle;
      cursor: pointer;
-     border: 1px solid transparent;
      border-radius: 4px;
      -webkit-user-select: none;
      -moz-user-select: none;
@@ -104,6 +111,22 @@ p {
      -o-user-select: none;
      user-select: none;
 }
+
+
+/*.modalClose {
+     display: block;
+     margin: .75em 1.75em .5em 1.5em;
+     background-color: white;
+     border: solid #3B9BCD 1px;
+     border-radius: 5px;
+     color: #3B9BCD;
+     font-size: .75em;
+     width: 10%;
+     height: 30px;
+     float: right;
+     clear: both;
+ }*/
+
 
 /******************************************
 /* LAYOUT                   
@@ -333,6 +356,14 @@ section {
      clear: both;
 }
 
+/* Mobile */
+@media only screen and (max-width: 449px) {
+  section {
+    display: none;
+  }
+}
+
+
 
 /******************************************
 /* ADDITIONAL STYLES                   
@@ -347,6 +378,21 @@ input[type=submit] {
      width: 20%;
 }
 
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+   input[type=submit] {
+    width: 30%;
+    }
+}
+
+
 form {
      padding: 12px 20px;
      margin: 8px 0;
@@ -357,6 +403,7 @@ form {
      overflow: hidden;
      clear:both;
 } 
+
 
 input {
      outline: none;

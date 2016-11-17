@@ -1,8 +1,7 @@
 var dataSign;
 var currentModal;
 
-// my variables: an array with my images and the image index counter
-
+// my variables: an array with the modals, incremental counters for modal index and current modal
 var modals = $(".modal"); 
 var modalIndex = 0;
 var currentModalIndex = 0;
@@ -80,7 +79,7 @@ $(".modalClose").on("click", function(){
 // this is a function to find the value of the previous image 
 function prevImage(){
 	if (modalIndex === 0) {
-		modalIndex = images.length-1;
+		modalIndex = modals.length-1;
 	} else {
 		modalIndex--;
 	}
